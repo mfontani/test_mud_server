@@ -1,0 +1,9 @@
+---
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Left
+BasedOnStyle: llvm
+BreakBeforeBraces: Allman
+ColumnLimit: 120
+IndentWidth: 2
+ReflowComments: false
+SortIncludes: true
