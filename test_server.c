@@ -872,7 +872,7 @@ void handle_client(int client_socket, struct sockaddr_in6 client_addr)
               printf("Client %s: !can_mccp4, so starting MCCP2 now!\n", client_name);
               if (!start_mccp2_compression(&d, -1))
                 goto cleanup;
-              if (!send_to_desc(&d, "[Enabled MCCP4 compression]\r\n", 0))
+              if (!send_to_desc(&d, "[Enabled MCCP2 compression]\r\n", 0))
                 goto cleanup;
             }
           }
@@ -951,7 +951,7 @@ void handle_client(int client_socket, struct sockaddr_in6 client_addr)
                         goto cleanup;
                       if (!start_mccp4_compression(&d, 9))
                         goto cleanup;
-                      if (!send_to_desc(&d, "[Enabled MCCP2 compression]\r\n", 0))
+                      if (!send_to_desc(&d, "[Enabled MCCP4 compression]\r\n", 0))
                         goto cleanup;
                     }
                     else
